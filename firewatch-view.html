@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>firewatch view</title>
+  <style>
+    :root {
+      --tree-light: #2E112D;
+      --tree-dark: #220F21;
+
+      --mountain-light-1: #540032;
+      --mountain-dark-1: #380322;
+
+      --mountain-light-2: #830333;
+      --mountain-dark-2: #45011B;
+
+      --mountain-light-3: #C92A40;
+      --mountain-dark-3: #700312;
+
+      --mountain-light-4: #FF583D;
+      --mountain-dark-4: #7D1909;
+
+      --sky-light: #FFDBC5;
+      --sky-dark: #070e17;
+
+      --cloud-light: #FFE9DC;
+      --cloud-dark: #444343;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #main {
+      max-width: 100vw;
+      height: 100vh;
+      background-color: var(--sky-light);
+    }
+
+    svg {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+
+    #cloud-group {
+      fill: var(--cloud-light);
+    }
+
+    #mountain-group-1 {
+      fill: var(--mountain-light-1);
+    }
+
+    #mountain-group-2 {
+      fill: var(--mountain-light-2);
+    }
+
+    #mountain-group-3 {
+      fill: var(--mountain-light-3);
+    }
+
+    #mountain-group-4 {
+      fill: var(--mountain-light-4);
+    }
+
+    .tree-group {
+      fill: var(--tree-light);
+    }
+
+    #main,
+    #cloud-group,
+    #mountain-group-1,
+    #mountain-group-2,
+    #mountain-group-3,
+    #mountain-group-4,
+    .tree-group {
+      transition: all 1s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div style="padding: 1rem 2rem;">
+      <button id="timeButton" style="padding: 0.25rem 0.5rem; border-radius: 1rem;">Change time</button>
+    </div>
+    <svg width="1920" viewBox="0 0 1920 812" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="firewatch-view" clip-path="url(#clip0_2_33)">
+        <g id="cloud-group">
+          <path id="cloud-1" fill-rule="evenodd" clip-rule="evenodd"
+            d="M809.113 196.717C883.055 195.598 931 192.39 931 190.4C931 186.846 772.29 178.069 597.415 186.647C403.822 178.069 263.829 186.846 263.829 190.4C263.829 190.534 264.039 190.675 264.454 190.82C82.3265 187.2 -39 197.416 -39 202.083C-39 207.857 154.459 219.943 403.415 207.746C643.137 219.943 845.829 207.857 845.829 202.083C845.829 200.635 832.598 198.654 809.113 196.717Z"
+            />
+          <path id="cloud-2" fill-rule="evenodd" clip-rule="evenodd"
+            d="M1749.11 288.717C1823.06 287.598 1871 284.39 1871 282.4C1871 278.846 1712.29 270.069 1537.41 278.647C1343.82 270.069 1203.83 278.846 1203.83 282.4C1203.83 282.534 1204.04 282.675 1204.45 282.82C1022.33 279.2 901 289.416 901 294.083C901 299.857 1094.46 311.943 1343.41 299.746C1583.14 311.943 1785.83 299.857 1785.83 294.083C1785.83 292.635 1772.6 290.654 1749.11 288.717Z"
+            />
+          <path id="cloud-3" fill-rule="evenodd" clip-rule="evenodd"
+            d="M1397.84 243.717C1431.3 242.598 1453 239.39 1453 237.4C1453 233.846 1381.17 225.069 1302.03 233.647C1214.41 225.069 1151.05 233.846 1151.05 237.4C1151.05 237.534 1151.15 237.675 1151.34 237.82C1068.91 234.2 1014 244.416 1014 249.083C1014 254.857 1101.56 266.943 1214.23 254.746C1322.72 266.943 1414.45 254.857 1414.45 249.083C1414.45 247.635 1408.47 245.654 1397.84 243.717Z"
+            />
+        </g>
+        <g id="mountain-group-4">
+          <path id="mountain-9"
+            d="M414.654 9L113.712 187.899L-78.8386 425.832L-414 827H1529L1214.59 327.01L967.139 187.899L677.821 446.458L414.654 9Z"
+            />
+          <path id="mountain-8"
+            d="M1700 309.78L1822.54 333.758L1981.8 507.553L2259 800.58H652L912.037 435.37L1116.7 333.758L1355.99 522.619L1700 309.78Z"
+            />
+          <path id="mountain-7"
+            d="M1093.94 182.761L918.066 356.396L759.563 379.367L510 813.79H1995L1578 568.54L1457.63 356.396L1093.94 182.761Z"
+            />
+        </g>
+        <g id="mountain-group-3">
+          <path id="mountain-6"
+            d="M1631.78 396.775H1490.16L1414.43 534.274L1306.71 548.975L1137.11 827H1920L1862.91 670.043L1777.96 452.783L1700.34 353L1631.78 396.775Z"
+            />
+          <path id="mountain-5"
+            d="M761.618 201L552.598 302.5L434.065 461.5L265.463 478.5L3.05176e-05 800H1225.4L1136.04 618.5L1003.08 367.266L901.496 201H761.618Z"
+            />
+        </g>
+        <g id="mountain-group-2">
+          <path id="mountain-4"
+            d="M1212.94 338L1128 396.19L1058.94 486.538L944 814.75H1627.93L1468.16 548.556L1335 486.538L1212.94 338Z"
+            />
+          <path id="mountain-3"
+            d="M183.94 350.251L8.06616 481.433L-150.437 498.788L-400 827H1085L668 641.711L547.629 481.433L183.94 350.251Z"
+            />
+        </g>
+        <g id="mountain-group-1">
+          <path id="mountain-2"
+            d="M1006.02 511L1082.17 553.339L1140.69 636.965L1223.94 645.907L1355 815H750L794.115 719.54L859.761 587.403L951.141 544.135L1006.02 511Z"
+            />
+          <path id="mountain-1"
+            d="M414.99 333L495.99 461.5L568.99 478.5L683.928 800H0V630.5L159.771 539.25L247.49 461.5L414.99 333Z"
+            />
+        </g>
+        <g id="tree-group-1" class="tree-group">
+          <g id="tree">
+            <rect id="Rectangle 1" x="35" y="754" width="32" height="60" />
+            <path id="Polygon 1" d="M51.5 672L114.287 780.75H-11.2868L51.5 672Z" />
+            <path id="Polygon 2" d="M51 628L101.229 715H0.770527L51 628Z" />
+          </g>
+          <g id="tree_2">
+            <rect id="Rectangle 1_2" x="197" y="775" width="32" height="60" />
+            <path id="Polygon 1_2" d="M211.5 672L274.287 780.75H148.713L211.5 672Z" />
+            <path id="Polygon 2_2" d="M211 628L261.229 715H160.771L211 628Z" />
+          </g>
+          <g id="tree_3">
+            <rect id="Rectangle 1_3" x="123" y="785" width="32" height="60" />
+            <path id="Polygon 1_3" d="M139.5 703L202.287 811.75H76.7132L139.5 703Z" />
+            <path id="Polygon 2_3" d="M139 659L189.229 746H88.7705L139 659Z" />
+          </g>
+        </g>
+        <g id="tree-group-2" class="tree-group">
+          <g id="tree_4">
+            <rect id="Rectangle 1_4" x="576.4" y="766.9" width="36.8" height="69" />
+            <path id="Polygon 1_4" d="M595.375 672.6L667.58 797.662H523.17L595.375 672.6Z" />
+            <path id="Polygon 2_4" d="M594.8 622L652.564 722.05H537.036L594.8 622Z" />
+          </g>
+          <g id="tree_5">
+            <rect id="Rectangle 1_5" x="762.7" y="791.05" width="36.8" height="69" />
+            <path id="Polygon 1_5" d="M779.375 672.6L851.58 797.662H707.17L779.375 672.6Z" />
+            <path id="Polygon 2_5" d="M778.8 622L836.564 722.05H721.036L778.8 622Z" />
+          </g>
+          <g id="tree_6">
+            <rect id="Rectangle 1_6" x="677.6" y="802.55" width="36.8" height="69" />
+            <path id="Polygon 1_6" d="M696.575 708.25L768.78 833.312H624.37L696.575 708.25Z" />
+            <path id="Polygon 2_6" d="M696 657.65L753.764 757.7H638.236L696 657.65Z" />
+          </g>
+        </g>
+        <g id="tree-group-3" class="tree-group">
+          <g id="tree_7">
+            <rect id="Rectangle 1_7" x="1738.4" y="757.9" width="36.8" height="69" />
+            <path id="Polygon 1_7" d="M1757.38 663.6L1829.58 788.662H1685.17L1757.38 663.6Z" />
+            <path id="Polygon 2_7" d="M1756.8 613L1814.56 713.05H1699.04L1756.8 613Z" />
+          </g>
+          <g id="tree_8">
+            <path id="Polygon 1_8" d="M1941.38 663.6L2013.58 788.662H1869.17L1941.38 663.6Z" />
+            <path id="Polygon 2_8" d="M1940.8 613L1998.56 713.05H1883.04L1940.8 613Z" />
+          </g>
+          <g id="tree_9">
+            <rect id="Rectangle 1_8" x="1839.6" y="793.55" width="36.8" height="69" />
+            <path id="Polygon 1_9" d="M1858.58 699.25L1930.78 824.312H1786.37L1858.58 699.25Z" />
+            <path id="Polygon 2_9" d="M1858 648.65L1915.76 748.7H1800.24L1858 648.65Z" />
+          </g>
+        </g>
+        <g id="tree-group-4" class="tree-group">
+          <g id="tree_10">
+            <path id="Polygon 1_10" d="M262.5 730L325.287 838.75H199.713L262.5 730Z"  />
+            <path id="Polygon 2_10" d="M262 686L312.229 773H211.771L262 686Z"  />
+          </g>
+          <g id="tree_11">
+            <path id="Polygon 1_11" d="M422.5 730L485.287 838.75H359.713L422.5 730Z"  />
+            <path id="Polygon 2_11" d="M422 686L472.229 773H371.771L422 686Z"  />
+          </g>
+          <g id="tree_12">
+            <path id="Polygon 1_12" d="M350.5 761L413.287 869.75H287.713L350.5 761Z"  />
+            <path id="Polygon 2_12" d="M350 717L400.229 804H299.771L350 717Z"  />
+          </g>
+        </g>
+        <g id="tree-group-5" class="tree-group">
+          <g id="tree_13">
+            <rect id="Rectangle 1_9" x="309.711" y="723.173" width="36.4066" height="66.2727"  />
+            <path id="Polygon 1_13" d="M328.484 632.6L399.917 752.719H257.051L328.484 632.6Z"  />
+            <path id="Polygon 2_13" d="M327.915 584L385.061 680.095H270.768L327.915 584Z"  />
+          </g>
+          <g id="tree_14">
+            <rect id="Rectangle 1_10" x="494.02" y="746.368" width="36.4066" height="66.2727"  />
+            <path id="Polygon 1_14" d="M510.516 632.6L581.949 752.719H439.083L510.516 632.6Z"  />
+            <path id="Polygon 2_14" d="M509.948 584L567.094 680.095H452.801L509.948 584Z"  />
+          </g>
+          <g id="tree_15">
+            <rect id="Rectangle 1_11" x="409.829" y="757.414" width="36.4066" height="66.2727"  />
+            <path id="Polygon 1_15" d="M428.602 666.841L500.035 786.96H357.169L428.602 666.841Z"  />
+            <path id="Polygon 2_15" d="M428.033 618.241L485.179 714.336H370.886L428.033 618.241Z"  />
+          </g>
+        </g>
+        <g id="tree-group-6" class="tree-group">
+          <g id="tree_16">
+            <rect id="Rectangle 1_12" x="817.751" y="748.022" width="38.7148" height="78.1058"  />
+            <path id="Polygon 1_16" d="M837.713 641.278L913.675 782.844H761.751L837.713 641.278Z"  />
+            <path id="Polygon 2_16" d="M837.108 584L897.878 697.253H776.339L837.108 584Z"  />
+          </g>
+          <g id="tree_17">
+            <rect id="Rectangle 1_13" x="1013.74" y="775.359" width="38.7148" height="78.1058"  />
+            <path id="Polygon 1_17" d="M1031.29 641.278L1107.25 782.844H955.325L1031.29 641.278Z"  />
+            <path id="Polygon 2_17" d="M1030.68 584L1091.45 697.253H969.913L1030.68 584Z"  />
+          </g>
+          <g id="tree_18">
+            <rect id="Rectangle 1_14" x="924.216" y="788.377" width="38.7148" height="78.1058"  />
+            <path id="Polygon 1_18" d="M944.179 681.632L1020.14 823.199H868.217L944.179 681.632Z"  />
+            <path id="Polygon 2_18" d="M943.574 624.355L1004.34 737.608H882.804L943.574 624.355Z"  />
+          </g>
+        </g>
+        <g id="tree-group-7" class="tree-group">
+          <g id="tree_19">
+            <path id="Polygon 1_19" d="M1139.71 720.278L1215.67 861.844H1063.75L1139.71 720.278Z"  />
+            <path id="Polygon 2_19" d="M1139.11 663L1199.88 776.253H1078.34L1139.11 663Z"  />
+          </g>
+          <g id="tree_20">
+            <path id="Polygon 1_20" d="M1333.29 720.278L1409.25 861.844H1257.33L1333.29 720.278Z"  />
+            <path id="Polygon 2_20" d="M1332.68 663L1393.45 776.253H1271.91L1332.68 663Z"  />
+          </g>
+          <g id="tree_21">
+            <path id="Polygon 1_21" d="M1246.18 760.632L1322.14 902.199H1170.22L1246.18 760.632Z"  />
+            <path id="Polygon 2_21" d="M1245.57 703.355L1306.34 816.608H1184.8L1245.57 703.355Z"  />
+          </g>
+        </g>
+        <g id="tree-group-8" class="tree-group">
+          <g id="tree_22">
+            <rect id="Rectangle 1_15" x="1242.75" y="745.022" width="38.7148" height="78.1058"  />
+            <path id="Polygon 1_22" d="M1262.71 638.278L1338.67 779.844H1186.75L1262.71 638.278Z"  />
+            <path id="Polygon 2_22" d="M1262.11 581L1322.88 694.253H1201.34L1262.11 581Z"  />
+          </g>
+          <g id="tree_23">
+            <rect id="Rectangle 1_16" x="1438.74" y="772.359" width="38.7148" height="78.1058"  />
+            <path id="Polygon 1_23" d="M1456.29 638.278L1532.25 779.844H1380.33L1456.29 638.278Z"  />
+            <path id="Polygon 2_23" d="M1455.68 581L1516.45 694.253H1394.91L1455.68 581Z"  />
+          </g>
+          <g id="tree_24">
+            <rect id="Rectangle 1_17" x="1349.22" y="785.377" width="38.7148" height="78.1058"  />
+            <path id="Polygon 1_24" d="M1369.18 678.632L1445.14 820.199H1293.22L1369.18 678.632Z"  />
+            <path id="Polygon 2_24" d="M1368.57 621.355L1429.34 734.608H1307.8L1368.57 621.355Z"  />
+          </g>
+        </g>
+        <g id="tree-group-9" class="tree-group">
+          <g id="tree_25">
+            <rect id="Rectangle 1_18" x="1527.68" y="773.231" width="28.9574" height="62.0149"  />
+            <path id="Polygon 1_25" d="M1542.61 688.478L1599.42 800.88H1485.79L1542.61 688.478Z"  />
+            <path id="Polygon 2_25" d="M1542.15 643L1587.61 732.922H1496.7L1542.15 643Z"  />
+          </g>
+          <g id="tree_26">
+            <rect id="Rectangle 1_19" x="1674.27" y="794.937" width="28.9574" height="62.0149"  />
+            <path id="Polygon 1_26" d="M1687.39 688.478L1744.21 800.88H1630.58L1687.39 688.478Z"  />
+            <path id="Polygon 2_26" d="M1686.94 643L1732.39 732.922H1641.49L1686.94 643Z"  />
+          </g>
+          <g id="tree_27">
+            <rect id="Rectangle 1_20" x="1607.31" y="805.272" width="28.9574" height="62.0149"  />
+            <path id="Polygon 1_27" d="M1622.24 720.519L1679.06 832.921H1565.42L1622.24 720.519Z"  />
+            <path id="Polygon 2_27" d="M1621.79 675.041L1667.24 764.963H1576.33L1621.79 675.041Z"  />
+          </g>
+        </g>
+      </g>
+      <!-- <defs>
+        <clipPath id="clip0_2_33">
+          <rect width="1920" height="812" fill="white" />
+        </clipPath>
+      </defs> -->
+    </svg>
+  </div>
+
+
+  <script>
+    const timeButton = document.getElementById('timeButton');
+    const mainDiv = document.getElementById('main');
+    const cloudGroup = document.getElementById('cloud-group');
+    const mountainGroup1 = document.getElementById('mountain-group-1');
+    const mountainGroup2 = document.getElementById('mountain-group-2');
+    const mountainGroup3 = document.getElementById('mountain-group-3');
+    const mountainGroup4 = document.getElementById('mountain-group-4');
+    const treeGroup = document.getElementsByClassName('tree-group');
+
+    let timeOfDay = 'day';
+
+    timeButton.onclick = (e) => {
+      switch (timeOfDay) {
+        case "day":
+          timeButton.innerText = "Good evening"
+          mainDiv.style.cssText = "background-color: var(--sky-dark);"
+          cloudGroup.style.cssText = "fill: var(--cloud-dark);"
+          mountainGroup1.style.cssText = "fill: var(--mountain-dark-1);"
+          mountainGroup2.style.cssText = "fill: var(--mountain-dark-2);"
+          mountainGroup3.style.cssText = "fill: var(--mountain-dark-3);"
+          mountainGroup4.style.cssText = "fill: var(--mountain-dark-4);"
+          for (let i = 0; i < treeGroup.length; i++) {
+            treeGroup[i].style.cssText = "fill: var(--tree-dark);"
+          }         
+          timeOfDay = 'night';
+          break;
+        
+        case "night":
+          timeButton.innerText = "Good afternoon0"
+          mainDiv.style.cssText = "background-color: var(--sky-light);"
+          cloudGroup.style.cssText = "fill: var(--cloud-light);"
+          mountainGroup1.style.cssText = "fill: var(--mountain-light-1);"
+          mountainGroup2.style.cssText = "fill: var(--mountain-light-2);"
+          mountainGroup3.style.cssText = "fill: var(--mountain-light-3);"
+          mountainGroup4.style.cssText = "fill: var(--mountain-light-4);"
+          for (let i = 0; i < treeGroup.length; i++) {
+            treeGroup[i].style.cssText = "fill: var(--tree-light);"
+          }
+          timeOfDay = 'day';
+          break;
+      }
+    }
+  </script>
+</body>
+
+</html>
